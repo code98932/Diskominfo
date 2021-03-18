@@ -8,12 +8,14 @@
 
   <androidx.appcompat.widget.Toolbar
       android:id="@+id/toolbar"
+      android:background="?attr/colorPrimary"
       android:minHeight="?attr/actionBarSize"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:titleTextColor="@color/white"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:padding="8dp"
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
