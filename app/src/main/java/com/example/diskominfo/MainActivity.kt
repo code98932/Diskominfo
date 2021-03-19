@@ -68,9 +68,6 @@ class MainActivity : AppCompatActivity() {
         val url_get_data =StringBuilder(RSS_link)
         url_get_data.append(RSS_link)
         loadRSSAsync.execute(url_get_data.toString())
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
