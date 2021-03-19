@@ -19,7 +19,7 @@ import java.lang.StringBuilder
 class MainActivity : AppCompatActivity() {
 
      private val RSS_link ="https://www.bekasikota.go.id/rss"
-     private val RSS_to_JSON =" https://api.rss2json.com/v1/api.json?rss_url="
+//     private val RSS_to_JSON =" https://api.rss2json.com/v1/api.json?rss_url="
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val url_get_data =StringBuilder(RSS_to_JSON)
+        val url_get_data =StringBuilder(RSS_link)
         url_get_data.append(RSS_link)
         loadRSSAsync.execute(url_get_data.toString())
 
