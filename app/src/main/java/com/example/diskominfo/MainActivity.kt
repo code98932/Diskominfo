@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        swipeToRef.setOnClickListener {
+            loadRSS()
+            swipeToRef.isRefreshing = false
+        }
+
         toolbar.title = "NEWS"
         setSupportActionBar(toolbar)
 
@@ -66,14 +71,4 @@ class MainActivity : AppCompatActivity() {
         loadRSSAsync.execute(url_get_data.toString())
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu,menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_refresh)
-            loadRSS()
-        return true
-    }
 }

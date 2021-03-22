@@ -14,13 +14,21 @@
       android:layout_height="wrap_content"
       app:titleTextColor="@color/white"/>
 
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/toolbar"
+      android:id="@+id/swipeToRef">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:padding="8dp"
+        tools:listitem="@layout/row"
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 
